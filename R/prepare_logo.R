@@ -7,5 +7,5 @@ print(logo)
 ectl_logo <- image_scale(logo, "80")
 print(ectl_logo)
 
-image_write(ectl_logo, path = "C:/LocalFiles/RProjects/ectrlplot/ectl_logo.png", format = "png")
-#image_write(logo, path = "C:/LocalFiles/RProjects/bookdown/images/logo.png", format = "png")
+image_write(ectl_logo, path = "C:/LocalFiles/RProjects/ectrlplot/data/ectl_logo.png", format = "png")
+
