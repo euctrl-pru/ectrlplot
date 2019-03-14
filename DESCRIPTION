@@ -1,11 +1,11 @@
 Package: ectrlplot
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Making ggplot graphics in PRU theme
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Stavrou Androniki
+Maintainer: <pru-support@eurocontrol.int>
+Description: Helps create and export ggplot2 charts in the style used by 
+    the PRU team thanks to two useful functions, one for styling and another for exporting ggplot graphics
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
