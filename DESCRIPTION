@@ -2,8 +2,9 @@ Package: ectrlplot
 Type: Package
 Title: Making ggplot graphics in PRU theme
 Version: 0.1.0
-Author: Stavrou Androniki
-Maintainer: <pru-support@eurocontrol.int>
+Authors@R: c(
+    person("Stavrou", "Androniki", email = "androniki.stavrou.ext@eurocontrol.int", role = "cre"),
+    person("Spinielli", "Enrico", email = "enrico.spinielli@eurocontrol.int", role = c("aut", "cre")))
 Description: Helps create and export ggplot2 charts in the style used by 
     the PRU team thanks to two useful functions, one for styling and another for exporting ggplot graphics
 Depends: R (>= 3.3.0)    
