@@ -17,10 +17,13 @@ left_align <- function(plot_name, pieces){
 
 create_footer <- function (source_name, logo_image_path) {
   #Make the footer
-  footer <- grid::grobTree( #grid::linesGrob(x = grid::unit(c(0, 1), "npc"), y = grid::unit(1.1, "npc")),
+  footer <- grid::grobTree(grid::linesGrob(x = grid::unit(c(0, 1), "npc"), y = grid::unit(2, "npc"),
+                                           gp = grid::gpar(col = "#969696", lwd = 1.5)),
                            grid::textGrob(source_name,
-                                          x = 0.004, hjust = 0, gp = grid::gpar(fontsize=10)),
-                           grid::rasterGrob(png::readPNG(logo_image_path), x = 0.95, y = 1.3))
+                                          x = 0.1, hjust = 0,
+                                          y = 1.3,
+                                          gp = grid::gpar(fontsize=9)),
+                           grid::rasterGrob(png::readPNG(logo_image_path), x = 0.866, y = 1.3))
 
   return(footer)
 
@@ -31,7 +34,7 @@ add_logo <- function(plot_name,
                      save_filepath=file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
                      width_pixels=640,
                      height_pixels=450,
-                     logo_image_path = "data/ectl_logo.png") {
+                     logo_image_path = "data/euctrl-logo.png") {
 
   footer <- create_footer(source_name, logo_image_path)
 
