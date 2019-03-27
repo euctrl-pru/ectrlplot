@@ -30,7 +30,7 @@ g <- ggplot(mpg[1:141,], aes(class)) +
        x = 'x lab',
        y = 'y lab')
 
-w <- ggplot(mpg1, aes(displ, model, fill = class)) +
+w <- ggplot(mpg, aes(displ, model, fill = class)) +
   geom_bar(stat = "identity") +
   theme_pru() +
   facet_grid(manufacturer ~ ., scales = "free", space = "free") +
