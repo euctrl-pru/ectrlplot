@@ -1,4 +1,15 @@
-  theme_pru <- function() {
+ #' Add PRU theme to ggplot chart
+ #'
+ #' This function allows you to add the pru theme to your ggplotgraphics.
+ #' @keywords theme_pru
+ #' @export
+ #' @examples
+ #' ggplot(mpg, aes(displ, hwy, colour = class)) +
+ #' geom_point() +
+ #' theme_pru()
+
+
+ theme_pru <- function() {
     font <- "sans"
 
     ggplot2::theme(
