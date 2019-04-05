@@ -7,7 +7,7 @@
 theme_pru()
 }
 \description{
-This function allows you to add the pru theme to your ggplotgraphics.
+This function allows you to add the pru theme to your ggplot graphics.
 }
 \examples{
 ggplot(mpg, aes(displ, hwy, colour = class)) +

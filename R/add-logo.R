@@ -29,6 +29,30 @@ create_footer <- function (source_name, logo_image_path) {
 
 }
 
+#' Add PRU logo and save ggplot chart
+#'
+#' Running this function will add the PRU logo in your plot and save it to your specified location.
+#' @param plot_name The variable name of the plot you have created that you want to format and save
+#' @param source_name The text you want to come after the text 'Source:' in the bottom left hand side of your side
+#' @param save_filepath Exact filepath that you want the plot to be saved to
+#' @param width_pixels Width in pixels that you want to save your chart to - defaults to 640
+#' @param height_pixels Height in pixels that you want to save your chart to - defaults to 450
+#' @param logo_image_path File path for the logo image you want to use in the right hand side of your chart,
+#'  which needs to be a PNG file - defaults to PRU logo that sits within the data folder of your package
+#' @return (Invisibly) an updated ggplot object.
+
+#' @keywords add_logo
+#' @examples
+#' add_logo(plot_name = myplot,
+#' source = "The source for my data",
+#' save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
+#' width_pixels = 640,
+#' height_pixels = 450,
+#' logo_image_path = "logo_image_filepath.png"
+#' )
+#'
+#' @export
+
 add_logo <- function(plot_name,
                      source_name,
                      save_filepath=file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),

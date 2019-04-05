@@ -1,6 +1,6 @@
  #' Add PRU theme to ggplot chart
  #'
- #' This function allows you to add the pru theme to your ggplotgraphics.
+ #' This function allows you to add the pru theme to your ggplot graphics.
  #' @keywords theme_pru
  #' @export
  #' @examples
