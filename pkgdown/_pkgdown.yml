@@ -1,0 +1,18 @@
+destination: docs
+url: https://ectrlplot.ansperformance.eu
+
+authors:
+Androniki Stavrou:
+  href: https://github.com/nstavrou
+EUROCONTROL:
+  href: https://www.eurocontrol.int
+html: "<img src='https://ansperformance.eu/nvctr/reference/figures/euctrl-logo-wide.svg' height=24>"
+
+toc:
+  depth: 2
+
+development:
+  mode: release
+
+pkgdown:
+  as_is: true
