@@ -9,6 +9,7 @@ Depends: R (>= 3.3.0)
 Imports:
     data.table,
     dplyr,
+    extrafont,
     ggplot2,
     ggpubr,
     grid,
