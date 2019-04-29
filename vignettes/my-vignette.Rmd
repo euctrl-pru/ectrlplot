@@ -1,10 +1,10 @@
 ---
-title: "Vignette Title"
+title: "PRU theme"
 author: "Stavrou Androniki"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{PRU theme}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,50 +16,130 @@ knitr::opts_chunk$set(
 )
 ```
 
-Vignettes are long form documentation commonly included in packages. Because they are part of the distribution of the package, they need to be as compact as possible. The `html_vignette` output type provides a custom style sheet (and tweaks some options) to ensure that the resulting html is as small as possible. The `html_vignette` format:
+## Examples
 
-- Never uses retina figures
-- Has a smaller default figure size
-- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
+Basic plot example 
 
-## Vignette Info
+```{r, fig.show='hold', warning=FALSE}
+library(ggplot2)
 
-Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
-
-## Styles
-
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
-
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
-
-## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+p1 <- ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  labs(title = "Scatterplot example in ggplot2")
+p1
 ```
 
-You can enable figure captions by `fig_caption: yes` in YAML:
+#### Adding theme_pru()
 
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
+```{r, include = FALSE, warning=FALSE}
+theme_pru <- function() {
+    #font <- "sans"
+    font <- "Arial Narrow"
 
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
+    ggplot2::theme(
 
-## More Examples
+      #Text format:
+      #This sets the font, size, type and colour of text for the chart's title
+      plot.title = ggplot2::element_text(family=font,
+                                         size=12,
+                                         face="bold",
+                                         color="#222222"),
+      #This sets the font, size, type and colour of text for the chart's subtitle, as well as setting a margin between the title and the subtitle
+      plot.subtitle = ggplot2::element_text(family=font,
+                                            size=11,
+                                            color="#222222",
+                                            margin=ggplot2::margin(0, 0, 0.5, 0, "cm")),
+      plot.caption = ggplot2::element_blank(),
+      #This leaves the caption text element empty, because it is set elsewhere in the add logo function
+      #plot.margin = grid::unit(c(0,0,0,0),"cm"),
+      #Legend format
+      #This sets the position and alignment of the legend, removes a title and backround for it and sets the requirements for any text within the legend. The legend may often need some more manual tweaking when it comes to its exact position based on the plot coordinates.
+      legend.position = "right",
+      legend.text.align = 0,
+      legend.background = ggplot2::element_blank(),
+      legend.title = ggplot2::element_blank(),
+      legend.key = ggplot2::element_blank(),
+      legend.text = ggplot2::element_text(family=font,
+                                          size=10,
+                                          color="#222222"),
 
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+      #Axis format
+      #This sets the text font, size and colour for the axis test, as well as setting the margins and removes lines and ticks. In some cases, axis lines and axis ticks are things we would want to have in the chart - the cookbook shows examples of how to do so.
+      axis.title.x = ggplot2::element_blank(),
+      axis.title.y = ggplot2::element_text(family = font,
+                                           size = 10,
+                                           color = "#000000"),
+      axis.text = ggplot2::element_text(family=font,
+                                        size=10,
+                                        color="#222222"),
+      axis.text.x = ggplot2::element_text(vjust = -0.8),  #margin=ggplot2::margin(0,0,0,0),
+      axis.text.y = ggplot2::element_text(hjust = 1),
+      axis.ticks = ggplot2::element_blank(),
+      axis.line.y = ggplot2::element_blank(),
+      axis.line.x = ggplot2::element_line(color = "#D5D5D5",
+                                          size = 1.2,
+                                          linetype = "solid",
+                                          lineend = "round"),
 
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
+      #Grid lines
+      #This removes all minor gridlines and adds major y gridlines.
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major.y = ggplot2::element_line(color="#D5D5D5"),
+      panel.grid.major.x = ggplot2::element_blank(),
+
+      #Blank background
+      #This sets the panel background as blank, removing the standard grey ggplot background colour from the plot
+      panel.background = ggplot2::element_rect(fill = "#FFFFFF"), #"#deebf7" 	#FFFFFF #f7fbff
+
+      #Strip background (#This sets the panel background for facet-wrapped plots to white, removing the standard grey ggplot background colour and sets the title size of the facet-wrap title to font size 22)
+      strip.background = ggplot2::element_rect(fill="#D5D5D5"),
+      strip.text = ggplot2::element_text(size  = 10,  hjust = 0)
+    )
+  } 
 ```
 
-Also a quote using `>`:
+```{r, fig.show='hold', warning=FALSE}
+p1 + theme_pru()
+```
 
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+#### Discrete color & fill scales based on the PRU palette
+
+Use the PRU color palette by adding <em>scale_color_pru()</em>, <em>scale_colour_pru()</em> or <em>scale_fill_pru()</em>
+
+```{r, include = FALSE, warning=FALSE}
+pru_palette <- c('#67001f','#b2182b','#d6604d','#f4a582','#fddbc7', '#92c5de','#4393c3','#2166ac','#053061')
+
+pru_pal <- function() { manual_pal(pru_palette) }
+
+scale_colour_pru <- function(...) { discrete_scale("colour", "pru", pru_pal(), ...) }
+
+scale_color_pru <- scale_colour_pru
+
+scale_fill_pru <- function(...) { discrete_scale("fill", "pru", pru_pal(), ...) }
+```
+
+```{r, fig.show='hold', warning=FALSE}
+library(scales)
+
+p2 <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+ geom_point() +
+ theme_pru() +
+ scale_color_pru() +
+labs(title = 'Scatterplot example in ggplot2',
+     subtitle = 'A plot that is only useful for demonstration purposes',
+     x = 'x lab',
+     y = 'y lab')
+p2
+```
+
+#### Modify components of the theme_pru() 
+
+If you want to modify a single plot's theme use <em>theme()</em>
+
+```{r, fig.show='hold', warning=FALSE}
+p2 + theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
+                                          size = 1.2,
+                                          linetype = "solid",
+                                          lineend = "round"),
+           panel.grid.major.y = ggplot2::element_blank())
+```
