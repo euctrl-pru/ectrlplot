@@ -22,7 +22,8 @@ create_footer <- function (source_name, logo_image_path) {
                            grid::textGrob(source_name,
                                           x = 0.1, hjust = 0,
                                           y = 1.3,
-                                          gp = grid::gpar(fontsize=9)),
+                                          gp = grid::gpar(family = "Arial Narrow",
+                                                          fontsize = 9)),
                            grid::rasterGrob(png::readPNG(logo_image_path), x = 0.866, y = 1.3))
 
   return(footer)

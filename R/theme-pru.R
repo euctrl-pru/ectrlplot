@@ -17,7 +17,6 @@
  #' geom_point() +
  #' theme_pru() +
  #' scale_color_pru() +
- #' scale_fill_pru() +
  #' labs(title = 'Scatterplot example in ggplot2',
  #'      subtitle = 'A plot that is only useful for demonstration purposes',
  #'      x = 'x lab',
@@ -59,7 +58,7 @@
                                             margin=ggplot2::margin(0, 0, 0.5, 0, "cm")),
       plot.caption = ggplot2::element_blank(),
       #This leaves the caption text element empty, because it is set elsewhere in the add logo function
-      plot.margin = grid::unit(c(2,2,2,2),"cm"),
+      #plot.margin = grid::unit(c(0,0,0,0),"cm"),
       #Legend format
       #This sets the position and alignment of the legend, removes a title and backround for it and sets the requirements for any text within the legend. The legend may often need some more manual tweaking when it comes to its exact position based on the plot coordinates.
       legend.position = "right",
