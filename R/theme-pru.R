@@ -4,13 +4,45 @@
  #' @keywords theme_pru
  #' @export
  #' @examples
+ #' library(ggplot2)
+ #' library(scales)
+ #' library(extrafont)
+ #'
  #' ggplot(mpg, aes(displ, hwy, colour = class)) +
  #' geom_point() +
  #' theme_pru()
+ #'
+ #'
+ #' ggplot(mpg, aes(displ, hwy, colour = class)) +
+ #' geom_point() +
+ #' theme_pru() +
+ #' scale_color_pru() +
+ #' scale_fill_pru() +
+ #' labs(title = 'Scatterplot example in ggplot2',
+ #'      subtitle = 'A plot that is only useful for demonstration purposes',
+ #'      x = 'x lab',
+ #'      y = 'y lab') +
+ #' theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
+ #'                                           size = 1.2,
+ #'                                           linetype = "solid",
+ #'                                           lineend = "round"),
+ #'       panel.grid.major.y = ggplot2::element_blank())
+ #'
+ #'
+ #' ggplot(mpg[1:137,], aes(class)) +
+ #' geom_bar(aes(fill = manufacturer)) +
+ #' theme_pru() +
+ #' scale_y_continuous(expand = c(0,0))  +
+ #' scale_fill_pru() +
+ #' labs(title = 'Barplot example in ggplot2',
+ #'      subtitle = 'A plot that is only useful for demonstration purposes',
+ #'      x = 'x lab',
+ #'      y = 'y lab')
 
 
  theme_pru <- function() {
-    font <- "sans"
+    #font <- "sans"
+    font <- "Arial Narrow"
 
     ggplot2::theme(
 
@@ -72,4 +104,5 @@
       strip.text = ggplot2::element_text(size  = 10,  hjust = 0)
     )
   }
+
 

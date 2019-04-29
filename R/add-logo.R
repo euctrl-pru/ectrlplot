@@ -43,12 +43,18 @@ create_footer <- function (source_name, logo_image_path) {
 
 #' @keywords add_logo
 #' @examples
+#' library(ggplot2)
+#'
+#' myplot <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+#' geom_point() +
+#' theme_pru()
+#'
 #' add_logo(plot_name = myplot,
 #' source = "The source for my data",
 #' save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
 #' width_pixels = 640,
 #' height_pixels = 450,
-#' logo_image_path = "logo_image_filepath.png"
+#' logo_image_path = "data/ectl-logo.png"
 #' )
 #'
 #' @export
@@ -58,7 +64,7 @@ add_logo <- function(plot_name,
                      save_filepath=file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
                      width_pixels=640,
                      height_pixels=450,
-                     logo_image_path = "data/euctrl-logo.png") {
+                     logo_image_path = "data/ectl-logo.png") {
 
   footer <- create_footer(source_name, logo_image_path)
 
