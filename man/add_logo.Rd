@@ -7,7 +7,7 @@
 add_logo(plot_name, source_name,
   save_filepath = file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
   width_pixels = 640, height_pixels = 450,
-  logo_image_path = "data/euctrl-logo.png")
+  logo_image_path = "data/ectl-logo.png")
 }
 \arguments{
 \item{plot_name}{The variable name of the plot you have created that you want to format and save}
@@ -30,12 +30,18 @@ which needs to be a PNG file - defaults to PRU logo that sits within the data fo
 Running this function will add the PRU logo in your plot and save it to your specified location.
 }
 \examples{
+library(ggplot2)
+
+myplot <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+geom_point() +
+theme_pru()
+
 add_logo(plot_name = myplot,
 source = "The source for my data",
 save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
 width_pixels = 640,
 height_pixels = 450,
-logo_image_path = "logo_image_filepath.png"
+logo_image_path = "data/ectl-logo.png"
 )
 
 }
