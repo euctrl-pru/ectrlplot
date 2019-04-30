@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><!-- %%  ~~function to do ... ~~ --> — theme_pru • ectrlplot</title>
+<title>Add PRU theme to ggplot chart — theme_pru • ectrlplot</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="<!-- %%  ~~function to do ... ~~ --> — theme_pru" />
+<meta property="og:title" content="Add PRU theme to ggplot chart — theme_pru" />
 
-<meta property="og:description" content="" />
+<meta property="og:description" content="This function allows you to add the pru theme to your ggplot graphics." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -78,6 +78,18 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/my-vignette.html">Why ectrlplot?</a>
+    </li>
+  </ul>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -94,92 +106,63 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1><!-- %%  ~~function to do ... ~~ --></h1>
+    <h1>Add PRU theme to ggplot chart</h1>
     
     <div class="hidden name"><code>theme_pru.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p><!-- %%  ~~ A concise (1-5 lines) description of what the function does. ~~ --></p>
+    <p>This function allows you to add the pru theme to your ggplot graphics.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>theme_pru</span>(<span class='no'>x</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>x</th>
-      <td><p><!-- %%     ~~Describe \code{x} here~~ --></p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p><!-- %%  ~~ If necessary, more details than the description above ~~ --></p>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p><!-- %%  ~Describe the value returned -->
-<!-- %%  If it is a LIST, use -->
-<!-- %%  \item{comp1 }{Description of 'comp1'} -->
-<!-- %%  \item{comp2 }{Description of 'comp2'} -->
-<!-- %% ... --></p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
-
-    <p><!-- %% ~put references to the literature/web site here ~ --></p>
-    
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p><!-- %%  ~~further notes~~ --></p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p><!-- %% ~~objects to See Also as \code{\link{help}}, ~~~ --></p></div>
-    
+    <pre class="usage"><span class='fu'>theme_pru</span>()</pre>
+        
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>##---- Should be DIRECTLY executable !! ----</span>
-<span class='co'>##-- ==&gt;  Define data, use random,</span>
-<span class='co'>##--	or do  help(data=index)  for the standard data sets.</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>ggplot2</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>scales</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>extrafont</span>)</div><div class='output co'>#&gt; <span class='message'>Registering fonts with R</span></div><div class='input'>
+<span class='no'>p1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='no'>mpg</span>, <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='no'>displ</span>, <span class='no'>hwy</span>, <span class='kw'>colour</span> <span class='kw'>=</span> <span class='no'>class</span>)) +
+ <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/geom_point'>geom_point</a></span>() +
+ <span class='fu'>theme_pru</span>()
+<span class='no'>p1</span></div><div class='img'><img src='theme_pru-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='no'>p1</span> + <span class='fu'>scale_color_pru</span>() +
+ <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/labs'>labs</a></span>(<span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>'Scatterplot example in ggplot2'</span>,
+      <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>'A plot that is only useful for demonstration purposes'</span>,
+      <span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>'x lab'</span>,
+      <span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>'y lab'</span>) +
+ <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/theme'>theme</a></span>(<span class='kw'>axis.line.y</span> <span class='kw'>=</span> <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/element'>element_line</a></span>(<span class='kw'>colour</span> <span class='kw'>=</span> <span class='st'>"#D5D5D5"</span>,
+                                           <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1.2</span>,
+                                           <span class='kw'>linetype</span> <span class='kw'>=</span> <span class='st'>"solid"</span>,
+                                           <span class='kw'>lineend</span> <span class='kw'>=</span> <span class='st'>"round"</span>),
+       <span class='kw'>panel.grid.major.y</span> <span class='kw'>=</span> <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/element'>element_blank</a></span>())</div><div class='img'><img src='theme_pru-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='co'>## The function is currently defined as</span>
-<span class='kw'>function</span> (<span class='no'>x</span>)
-{
-  }</div><div class='output co'>#&gt; function (x)
-#&gt; {
-#&gt;   }
-#&gt; &lt;environment: 0x0000000026b3c010&gt;</div></pre>
+<span class='no'>p2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='no'>mpg</span>[<span class='fl'>1</span>:<span class='fl'>137</span>,], <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='no'>class</span>)) +
+ <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/geom_bar'>geom_bar</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>manufacturer</span>)) +
+ <span class='fu'>theme_pru</span>() +
+ <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/scale_continuous'>scale_y_continuous</a></span>(<span class='kw'>expand</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>0</span>))  +
+ <span class='fu'>scale_fill_pru</span>() +
+ <span class='fu'><a href='https://www.rdocumentation.org/packages/ggplot2/topics/labs'>labs</a></span>(<span class='kw'>title</span> <span class='kw'>=</span> <span class='st'>'Barplot example in ggplot2'</span>,
+      <span class='kw'>subtitle</span> <span class='kw'>=</span> <span class='st'>'A plot that is only useful for demonstration purposes'</span>,
+      <span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>'x lab'</span>,
+      <span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>'y lab'</span>)
+<span class='no'>p2</span></div><div class='img'><img src='theme_pru-3.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#references">References</a></li>
-
-      <li><a href="#note">Note</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
+            
       <li><a href="#examples">Examples</a></li>
     </ul>
 
-    <h2>Author</h2>
-    <p><!-- %%  ~~who you are~~ --></p>
   </div>
 </div>
 
       <footer>
       <div class="copyright">
-  <p>Developed by The package maintainer.</p>
+  <p>Developed by Stavrou Androniki.</p>
 </div>
 
 <div class="pkgdown">
