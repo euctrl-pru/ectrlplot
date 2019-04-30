@@ -1,10 +1,10 @@
 ---
-title: "PRU theme"
+title: "Why ectrlplot?"
 author: "Stavrou Androniki"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{PRU theme}
+  %\VignetteIndexEntry{Why ectrlplot?}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -15,17 +15,46 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+## Introduction
+
+### What is the `ectrlplot` package?
+
+This is an R package, developed by the PRU team to make the process of creating publication-ready graphics in our in-house style, using R’s `ggplot2` library, a more reproducible process.  
+
+The package is constisted of the following functions:
+
+- `theme_pru` 
+to add the PRU style in the ggplot2 graphics
+
+- `add_logo` 
+to add the EUROCONTROL logo and the source
+
+- `scale_color_pru()`, `scale_colour_pru()` & `scale_fill_pru()` 
+to use the colour palette of the PRU team
+
+```{r fig.align='left', echo=FALSE, out.width='65%', include=identical(knitr:::pandoc_to(), 'html')}
+knitr::include_graphics('pru-pal.png', dpi = NA)
+```
+
+### Why to use `theme_pru`?
+
+This theme can be used to give to the PRU plots a consistent customized look.
 
 ## Examples
 
-Basic plot example 
+The following examples will help you understand how to use `ectrlplot` package and its components.
+
+### Example 1
+
+Let's start with a basic scatterplot example 
 
 ```{r, fig.show='hold', warning=FALSE}
 library(ggplot2)
 
 p1 <- ggplot(mtcars, aes(wt, mpg)) +
   geom_point() +
-  labs(title = "Scatterplot example in ggplot2")
+  labs(title = 'Scatterplot example in ggplot2',
+     subtitle = 'A plot that is only useful for demonstration purposes')
 p1
 ```
 
@@ -104,7 +133,7 @@ p1 + theme_pru()
 
 #### Discrete color & fill scales based on the PRU palette
 
-Use the PRU color palette by adding <em>scale_color_pru()</em>, <em>scale_colour_pru()</em> or <em>scale_fill_pru()</em>
+Use the PRU color palette by adding `scale_color_pru()`, `scale_colour_pru()` or `scale_fill_pru()`
 
 ```{r, include = FALSE, warning=FALSE}
 pru_palette <- c('#67001f','#b2182b','#d6604d','#f4a582','#fddbc7', '#92c5de','#4393c3','#2166ac','#053061')
@@ -126,15 +155,13 @@ p2 <- ggplot(mpg, aes(displ, hwy, colour = class)) +
  theme_pru() +
  scale_color_pru() +
 labs(title = 'Scatterplot example in ggplot2',
-     subtitle = 'A plot that is only useful for demonstration purposes',
-     x = 'x lab',
-     y = 'y lab')
+     subtitle = 'A plot that is only useful for demonstration purposes')
 p2
 ```
 
 #### Modify components of the theme_pru() 
 
-If you want to modify a single plot's theme use <em>theme()</em>
+If you want to modify a single plot's theme use `theme()`
 
 ```{r, fig.show='hold', warning=FALSE}
 p2 + theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
@@ -142,4 +169,35 @@ p2 + theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
                                           linetype = "solid",
                                           lineend = "round"),
            panel.grid.major.y = ggplot2::element_blank())
+```
+
+### Example 2
+
+Now, let's see how to use the `ectrlplot` package in ggplot2 bar chart
+
+```{r, fig.show='hold', warning=FALSE}
+b1 <- ggplot(mpg[1:137,], aes(class)) +
+  geom_bar()  +
+  labs(title = 'Bar chart example in ggplot2',
+     subtitle = 'A plot that is only useful for demonstration purposes')
+b1
+```
+
+
+```{r, fig.show='hold', warning=FALSE}
+b1 + theme_pru()
+```
+
+```{r, fig.show='hold', warning=FALSE}
+b2 <- ggplot(mpg[1:137,], aes(class)) +
+  geom_bar(aes(fill = manufacturer)) +
+  theme_pru() +
+  scale_y_continuous(expand = c(0,0))  +
+  labs(title = 'Bar chart example in ggplot2',
+     subtitle = 'A plot that is only useful for demonstration purposes')
+b2
+```
+
+```{r, fig.show='hold', warning=FALSE}
+b2 + scale_fill_pru()
 ```
