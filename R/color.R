@@ -8,7 +8,7 @@ pru_palette <- c('#67001f','#b2182b','#d6604d','#f4a582','#fddbc7', '#92c5de','#
 #' scales::show_col(pru_pal()(9))
 pru_pal <- function() { manual_pal(pru_palette) }
 
-#' Discrete color & fill scales based on the pru palette
+#' Discrete color & fill scales based on the PRU palette
 #'
 #' See [pru_pal]().
 #'

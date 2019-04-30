@@ -19,12 +19,11 @@ b <- ggplot(mpg, aes(displ, hwy, colour = class)) +
         panel.grid.major.y = ggplot2::element_blank())
 
 # barplot
-g <- ggplot(mpg[1:141,], aes(class)) +
+g <- ggplot(mpg[1:137,], aes(class)) +
   geom_bar(aes(fill = manufacturer)) +
   theme_pru() +
   scale_y_continuous(expand = c(0,0))  +
-  scale_fill_manual("legend", values = palette) +
-  #scale_fill_manual("legend", values = c('#92c5de','#4393c3','#2166ac')) +
+  scale_fill_pru() +
   labs(title = 'My title',
        subtitle = 'My subtitle',
        x = 'x lab',
