@@ -4,7 +4,7 @@
 \alias{scale_colour_pru}
 \alias{scale_color_pru}
 \alias{scale_fill_pru}
-\title{Discrete color & fill scales based on the pru palette}
+\title{Discrete color & fill scales based on the PRU palette}
 \usage{
 scale_colour_pru(...)
 
