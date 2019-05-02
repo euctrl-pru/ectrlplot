@@ -13,27 +13,20 @@
  #'  theme_pru()
  #' p1
  #'
- #' p1 + scale_color_pru() +
+ #' p1 + theme(panel.grid.major.y = ggplot2::element_blank(),
+ #'            axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
+ #'                                                size = 1.2,
+ #'                                                linetype = "solid",
+ #'                                                lineend = "round")) +
  #'  labs(title = 'Scatterplot example in ggplot2',
- #'       subtitle = 'A plot that is only useful for demonstration purposes',
- #'       x = 'x lab',
- #'       y = 'y lab') +
- #'  theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
- #'                                            size = 1.2,
- #'                                            linetype = "solid",
- #'                                            lineend = "round"),
- #'        panel.grid.major.y = ggplot2::element_blank())
- #'
+ #'       subtitle = 'A plot that is only useful for demonstration purposes')
  #'
  #' p2 <- ggplot(mpg[1:137,], aes(class)) +
  #'  geom_bar(aes(fill = manufacturer)) +
  #'  theme_pru() +
- #'  scale_y_continuous(expand = c(0,0))  +
- #'  scale_fill_pru() +
+ #'  scale_y_continuous(expand = c(0,0)) +
  #'  labs(title = 'Barplot example in ggplot2',
- #'       subtitle = 'A plot that is only useful for demonstration purposes',
- #'       x = 'x lab',
- #'       y = 'y lab')
+ #'       subtitle = 'A plot that is only useful for demonstration purposes')
  #' p2
 
 
@@ -56,7 +49,7 @@
                                             margin=ggplot2::margin(0, 0, 0.5, 0, "cm")),
       plot.caption = ggplot2::element_blank(),
       #This leaves the caption text element empty, because it is set elsewhere in the add logo function
-      #plot.margin = grid::unit(c(0,0,0,0),"cm"),
+      plot.margin = grid::unit(c(0,0,1.5,0),"cm"),
       #Legend format
       #This sets the position and alignment of the legend, removes a title and backround for it and sets the requirements for any text within the legend. The legend may often need some more manual tweaking when it comes to its exact position based on the plot coordinates.
       legend.position = "right",
