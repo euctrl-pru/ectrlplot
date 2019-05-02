@@ -16,6 +16,19 @@ pru_pal <- function() { manual_pal(pru_palette) }
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_pru
 #' @export
+#' @examples
+#' # Scatterplot
+#' g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+#'   geom_point()
+#' #
+#' g + scale_color_pru()
+#'
+#' # Bar chart
+#' p <- ggplot(mpg[1:137,], aes(class)) +
+#'   geom_bar(aes(fill = manufacturer))
+#' #
+#' p + scale_fill_pru()
+
 scale_colour_pru <- function(...) { discrete_scale("colour", "pru", pru_pal(), ...) }
 
 #' @export
