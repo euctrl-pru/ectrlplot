@@ -23,11 +23,13 @@ This is an R package, developed by the PRU team to make the process of creating 
 
 The package is constisted of the following functions:
 
-- `theme_pru` 
+- `theme_pru()` 
 to add the PRU style in the ggplot2 graphics
 
-- `add_logo` 
+- `add_logo()` 
 to add the EUROCONTROL logo and the source
+
+- `pru_pal()`
 
 - `scale_color_pru()`, `scale_colour_pru()` & `scale_fill_pru()` 
 to use the colour palette of the PRU team
@@ -36,13 +38,13 @@ to use the colour palette of the PRU team
 knitr::include_graphics('pru-pal.png', dpi = NA)
 ```
 
-### Why to use `theme_pru`?
+### Why to use it?
 
-This theme can be used to give to the PRU plots a consistent customized look.
+This package can be used to give to the graphics made by the PRU team a consistent customized look.
 
 ## Examples
 
-The following examples will help you understand how to use `ectrlplot` package and its components.
+The following examples will help you understand how to use `ectrlplot` package and its components step by step.
 
 ### Example 1
 
@@ -80,7 +82,7 @@ theme_pru <- function() {
                                             margin=ggplot2::margin(0, 0, 0.5, 0, "cm")),
       plot.caption = ggplot2::element_blank(),
       #This leaves the caption text element empty, because it is set elsewhere in the add logo function
-      #plot.margin = grid::unit(c(0,0,0,0),"cm"),
+      plot.margin = grid::unit(c(0,0,1.5,0),"cm"),
       #Legend format
       #This sets the position and alignment of the legend, removes a title and backround for it and sets the requirements for any text within the legend. The legend may often need some more manual tweaking when it comes to its exact position based on the plot coordinates.
       legend.position = "right",
@@ -164,11 +166,80 @@ p2
 If you want to modify a single plot's theme use `theme()`
 
 ```{r, fig.show='hold', warning=FALSE}
-p2 + theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
+p3 <- p2 + theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
                                           size = 1.2,
                                           linetype = "solid",
                                           lineend = "round"),
            panel.grid.major.y = ggplot2::element_blank())
+p3
+```
+
+#### Add logo 
+
+Finish the plot by adding the logo and the source
+
+```{r, include = FALSE, warning=FALSE}
+save_plot <- function (plot_grid, width, height, save_filepath) {
+  grid::grid.draw(plot_grid)
+  #save it
+  ggplot2::ggsave(filename = save_filepath,
+                  plot=plot_grid,
+                  width=(width/72),
+                  height=(height/72))
+}
+
+#Left align text
+left_align <- function(plot_name, pieces){
+  grob <- ggplot2::ggplotGrob(plot_name)
+  n <- length(pieces)
+  grob$layout$l[grob$layout$name %in% pieces] <- 2
+  return(grob)
+}
+
+create_footer <- function (source_name, logo_image_path) {
+  #Make the footer
+  footer <- grid::grobTree(grid::linesGrob(x = grid::unit(c(0, 1), "npc"), y = grid::unit(2, "npc"),
+                                           gp = grid::gpar(col = "#969696", lwd = 1)),
+                           grid::textGrob(source_name,
+                                          x = 0.01, hjust = 0,
+                                          y = 1.3,
+                                          gp = grid::gpar(family = "Arial Narrow",
+                                                          fontsize = 9)),
+                           grid::rasterGrob(png::readPNG(logo_image_path), x = 0.937, y = 1.3))
+
+  return(footer)
+
+}
+
+add_logo <- function(plot_name,
+                     source_name,
+                     save_filepath=file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
+                     width_pixels=640,
+                     height_pixels=450,
+                     logo_image_path = "ectl-logo.png") {
+
+  footer <- create_footer(source_name, logo_image_path)
+
+  #Draw your left-aligned grid
+  plot_left_aligned <- left_align(plot_name, c("subtitle", "title", "caption"))
+  plot_grid <- ggpubr::ggarrange(plot_left_aligned, footer,
+                                 ncol = 1, nrow = 2,
+                                 heights = c(1, 0.045/(height_pixels/450)))
+  ## print(paste("Saving to", save_filepath))
+  save_plot(plot_grid, width_pixels, height_pixels, save_filepath)
+  ## Return (invisibly) a copy of the graph. Can be assigned to a
+  ## variable or silently ignored.
+  invisible(plot_grid)
+}
+
+```
+
+```{r, fig.show='hold', warning=FALSE}
+add_logo(plot_name = p3,
+         source = "Source: My source",
+         save_filepath = "thisismyplot.png",
+         width_pixels = 640,
+         height_pixels = 450)
 ```
 
 ### Example 2
@@ -199,5 +270,14 @@ b2
 ```
 
 ```{r, fig.show='hold', warning=FALSE}
-b2 + scale_fill_pru()
+b3 <- b2 + scale_fill_pru()
+b3
+```
+
+```{r, fig.show='hold', warning=FALSE}
+add_logo(plot_name = b3,
+         source = "Source: My source",
+         save_filepath = "thisismyplot.png",
+         width_pixels = 640,
+         height_pixels = 450)
 ```
