@@ -18,13 +18,13 @@ left_align <- function(plot_name, pieces){
 create_footer <- function (source_name, logo_image_path) {
   #Make the footer
   footer <- grid::grobTree(grid::linesGrob(x = grid::unit(c(0, 1), "npc"), y = grid::unit(2, "npc"),
-                                           gp = grid::gpar(col = "#969696", lwd = 1.5)),
+                                           gp = grid::gpar(col = "#969696", lwd = 1)),
                            grid::textGrob(source_name,
-                                          x = 0.1, hjust = 0,
+                                          x = 0.01, hjust = 0,
                                           y = 1.3,
                                           gp = grid::gpar(family = "Arial Narrow",
                                                           fontsize = 9)),
-                           grid::rasterGrob(png::readPNG(logo_image_path), x = 0.866, y = 1.3))
+                           grid::rasterGrob(png::readPNG(logo_image_path), x = 0.937, y = 1.3))
 
   return(footer)
 
