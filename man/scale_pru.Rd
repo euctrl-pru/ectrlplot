@@ -62,15 +62,15 @@ The default, \code{TRUE}, uses the levels that appear in the data;
 See \url{pru_pal}.
 }
 \examples{
-# Scatterplot
+library(ggplot2)
+
 g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point()
-#
+
 g + scale_color_pru()
 
-# Bar chart
 p <- ggplot(mpg[1:137,], aes(class)) +
   geom_bar(aes(fill = manufacturer))
-#
+
 p + scale_fill_pru()
 }
