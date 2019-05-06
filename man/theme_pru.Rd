@@ -11,7 +11,6 @@ This function allows you to add the pru theme to your ggplot graphics.
 }
 \examples{
 library(ggplot2)
-library(scales)
 
 p1 <- ggplot(mpg, aes(displ, hwy, colour = class)) +
  geom_point() +
