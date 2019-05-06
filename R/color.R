@@ -2,10 +2,11 @@ pru_palette <- c('#67001f','#b2182b','#d6604d','#f4a582','#fddbc7', '#92c5de','#
 
 #' A muted, qualitative color palette
 #'
+#' @importFrom scales manual_pal
 #' @export
 #' @examples
 #' library(scales)
-#' scales::show_col(pru_pal()(9))
+#' show_col(pru_pal()(9))
 pru_pal <- function() { manual_pal(pru_palette) }
 
 #' Discrete color & fill scales based on the PRU palette
@@ -15,6 +16,7 @@ pru_pal <- function() { manual_pal(pru_palette) }
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_pru
+#' @importFrom ggplot2 discrete_scale expand_scale
 #' @export
 #' @examples
 #' library(ggplot2)

@@ -11,5 +11,5 @@ A muted, qualitative color palette
 }
 \examples{
 library(scales)
-scales::show_col(pru_pal()(9))
+show_col(pru_pal()(9))
 }

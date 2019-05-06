@@ -1,13 +1,12 @@
 Package: ectrlplot
 Type: Package
-Title: Making ggplot graphics in PRU theme
+Title: Making ggplot graphics in PRU style
 Version: 0.1.0
 Authors@R: c(
   person("Stavrou", "Androniki", email = "androniki.g.stavrou@gmail.com", role = c("aut", "cre")),
   person("EUROCONTROL", role = c("cph", "fnd"))
   )
-Description: Helps create and export ggplot2 charts in the style used by
-    the PRU team thanks to two useful functions, one for styling and another for exporting ggplot graphics
+Description: A package to create graphics using ggplot2 styled by the PRU team.
 Depends: R (>= 3.3.0)
 Imports:
     data.table,
@@ -16,7 +15,8 @@ Imports:
     ggplot2,
     ggpubr,
     grid,
-    png
+    png,
+    scales
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
