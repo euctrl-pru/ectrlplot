@@ -7,8 +7,8 @@
 add_logo(plot_name, source_name,
   save_filepath = file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
   width_pixels = 640, height_pixels = 450,
-  logo_image_path = system.file("inst/extdata", "ectl-logo.png", package
-  = "ectrlplot"))
+  logo_image_path = system.file("extdata", "euctrl-logo-wide.png",
+  package = "ectrlplot"))
 }
 \arguments{
 \item{plot_name}{The variable name of the plot you have created that you want to format and save}
@@ -42,7 +42,7 @@ source = "The source for my data",
 save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
 width_pixels = 640,
 height_pixels = 450,
-logo_image_path = system.file("inst/extdata", "ectl-logo.png", package = "ectrlplot")
+logo_image_path = system.file("extdata", "euctrl-logo-wide.png", package = "ectrlplot")
 )
 
 }

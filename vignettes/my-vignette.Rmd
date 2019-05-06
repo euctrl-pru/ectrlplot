@@ -15,6 +15,11 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+
+```{r echo = FALSE, message = FALSE}
+library(ectrlplot)
+```
+
 ## Introduction
 
 ### What is the `ectrlplot` package?
@@ -51,7 +56,6 @@ The following examples will help you understand how to use `ectrlplot` package a
 Let's start with a basic scatterplot example 
 
 ```{r, fig.show='hold', warning=FALSE}
-library(ectrlplot)
 library(ggplot2)
 
 p1 <- ggplot(mtcars, aes(wt, mpg)) +
