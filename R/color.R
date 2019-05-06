@@ -18,7 +18,7 @@ pru_pal <- function() { manual_pal(pru_palette) }
 #' @export
 #' @examples
 #' library(ggplot2)
-#'
+#' library(scales)
 #' g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
 #'   geom_point()
 #'

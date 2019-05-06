@@ -63,7 +63,7 @@ See \url{pru_pal}.
 }
 \examples{
 library(ggplot2)
-
+library(scales)
 g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point()
 
