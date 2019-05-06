@@ -24,7 +24,6 @@
  #' p2 <- ggplot(mpg[1:137,], aes(class)) +
  #'  geom_bar(aes(fill = manufacturer)) +
  #'  theme_pru() +
- #'  scale_y_continuous(expand = c(0,0)) +
  #'  labs(title = 'Barplot example in ggplot2',
  #'       subtitle = 'A plot that is only useful for demonstration purposes')
  #' p2
@@ -34,6 +33,7 @@
     #font <- "sans"
     font <- "Arial Narrow"
 
+    list(
     ggplot2::theme(
 
       #Text format:
@@ -92,6 +92,8 @@
       #Strip background (#This sets the panel background for facet-wrapped plots to white, removing the standard grey ggplot background colour and sets the title size of the facet-wrap title to font size 22)
       strip.background = ggplot2::element_rect(fill="#D5D5D5"),
       strip.text = ggplot2::element_text(size  = 10,  hjust = 0)
+    ),
+    ggplot2::scale_y_continuous(expand = expand_scale(mult = c(0, .1)))
     )
   }
 

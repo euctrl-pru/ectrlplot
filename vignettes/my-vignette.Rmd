@@ -14,10 +14,10 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-```
 
-```{r echo = FALSE, message = FALSE}
 library(ectrlplot)
+library(ggplot2)
+library(extrafont)
 ```
 
 ## Introduction
@@ -51,13 +51,11 @@ This package can be used to give to the graphics made by the PRU team a consiste
 
 The following examples will help you understand how to use `ectrlplot` package and its components step by step.
 
-### Example 1
+### Example 1 {#example-01}
 
 Let's start with a basic scatterplot example 
 
 ```{r, fig.show='hold', warning=FALSE}
-library(ggplot2)
-
 p1 <- ggplot(mtcars, aes(wt, mpg)) +
   geom_point() +
   labs(title = 'Scatterplot example in ggplot2',
@@ -133,7 +131,6 @@ b1 + theme_pru()
 b2 <- ggplot(mpg[1:137,], aes(class)) +
   geom_bar(aes(fill = manufacturer)) +
   theme_pru() +
-  scale_y_continuous(expand = c(0,0))  +
   labs(title = 'Bar chart example in ggplot2',
      subtitle = 'A plot that is only useful for demonstration purposes')
 b2
