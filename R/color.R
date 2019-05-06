@@ -17,10 +17,12 @@ pru_pal <- function() { manual_pal(pru_palette) }
 #' @rdname scale_pru
 #' @export
 #' @examples
+#' library(ggplot2)
+#'
 #' # Scatterplot
 #' g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
 #'   geom_point()
-#' #
+#' # add pru color palette
 #' g + scale_color_pru()
 #'
 #' # Bar chart

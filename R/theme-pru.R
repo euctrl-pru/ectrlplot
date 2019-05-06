@@ -6,7 +6,6 @@
  #' @examples
  #' library(ggplot2)
  #' library(scales)
- #' library(extrafont)
  #'
  #' p1 <- ggplot(mpg, aes(displ, hwy, colour = class)) +
  #'  geom_point() +
@@ -30,8 +29,8 @@
 
 
  theme_pru <- function() {
-    #font <- "sans"
-    font <- "Arial Narrow"
+    font <- "sans"
+    #font <- "Arial Narrow"
 
     list(
     ggplot2::theme(

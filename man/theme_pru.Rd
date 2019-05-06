@@ -30,7 +30,6 @@ p1 + theme(panel.grid.major.y = ggplot2::element_blank(),
 p2 <- ggplot(mpg[1:137,], aes(class)) +
  geom_bar(aes(fill = manufacturer)) +
  theme_pru() +
- scale_y_continuous(expand = c(0,0)) +
  labs(title = 'Barplot example in ggplot2',
       subtitle = 'A plot that is only useful for demonstration purposes')
 p2
