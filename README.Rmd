@@ -34,7 +34,7 @@ install.packages("ectrlplot")
 `ectrlplot` can be used to (example numbers refer to the
 ones in the [vignette][vignette]):
 
-* Calculate the surface distance between two geographical positions ([Example 1][ex1]).
+* Add the PRU theme ([Example 1][ex1]).
 
 [vignette]: <https://ectrlplot.ansperformance.eu/articles/my-vignette.html> "ectrlplot vignette"
 [ex1]: <https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-01> "Example 1"
