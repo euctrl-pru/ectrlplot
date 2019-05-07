@@ -1,6 +1,6 @@
 pru_palette <- c('#67001f','#b2182b','#d6604d','#f4a582','#fddbc7', '#92c5de','#4393c3','#2166ac','#053061')
 
-#' A diverging, colorblind safe palette
+#' A diverging, colorblind safe color palette
 #'
 #' @importFrom scales manual_pal
 #' @export

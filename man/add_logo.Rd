@@ -32,7 +32,9 @@ library(ggplot2)
 
 myplot <- ggplot(mpg, aes(displ, hwy)) +
 geom_point() +
-theme_pru()
+theme_pru()  +
+labs(title = 'Scatterplot example in ggplot2',
+     subtitle = 'A plot that is only useful for demonstration purposes')
 
 add_logo(plot_name = myplot,
 source = "Source: The source of my data",
