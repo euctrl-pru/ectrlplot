@@ -4,7 +4,7 @@ author: "Stavrou Androniki"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Why ectrlplot?}
+  %\VignetteIndexEntry{What is ectrlplot?}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -17,7 +17,6 @@ knitr::opts_chunk$set(
 
 library(ectrlplot)
 library(ggplot2)
-library(extrafont)
 ```
 
 ## Introduction
@@ -115,34 +114,34 @@ add_logo(plot_name = p3,
 Now, let's see how to use the `ectrlplot` package in ggplot2 bar chart
 
 ```{r, fig.show='hold', warning=FALSE}
-b1 <- ggplot(mpg[1:137,], aes(class)) +
+g1 <- ggplot(mpg[1:137,], aes(class)) +
   geom_bar()  +
   labs(title = 'Bar chart example in ggplot2',
      subtitle = 'A plot that is only useful for demonstration purposes')
-b1
+g1
 ```
 
 
 ```{r, fig.show='hold', warning=FALSE}
-b1 + theme_pru()
+g1 + theme_pru()
 ```
 
 ```{r, fig.show='hold', warning=FALSE}
-b2 <- ggplot(mpg[1:137,], aes(class)) +
+g2 <- ggplot(mpg[1:137,], aes(class)) +
   geom_bar(aes(fill = manufacturer)) +
   theme_pru() +
   labs(title = 'Bar chart example in ggplot2',
      subtitle = 'A plot that is only useful for demonstration purposes')
-b2
+g2
 ```
 
 ```{r, fig.show='hold', warning=FALSE}
-b3 <- b2 + scale_fill_pru()
-b3
+g3 <- g2 + scale_fill_pru()
+g3
 ```
 
 ```{r, fig.show='hold', warning=FALSE}
-add_logo(plot_name = b3,
+add_logo(plot_name = g3,
          source = "Source: My source",
          save_filepath = "thisismyplot.png",
          width_pixels = 640,
