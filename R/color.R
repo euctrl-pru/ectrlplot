@@ -1,6 +1,6 @@
 pru_palette <- c('#67001f','#b2182b','#d6604d','#f4a582','#fddbc7', '#92c5de','#4393c3','#2166ac','#053061')
 
-#' A muted, qualitative color palette
+#' A diverging, colorblind safe palette
 #'
 #' @importFrom scales manual_pal
 #' @export
@@ -21,14 +21,13 @@ pru_pal <- function() { manual_pal(pru_palette) }
 #' @examples
 #' library(ggplot2)
 #' library(scales)
-#' g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
-#'   geom_point()
 #'
+#' g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+#'     geom_point()
 #' g + scale_color_pru()
 #'
 #' p <- ggplot(mpg[1:137,], aes(class)) +
-#'   geom_bar(aes(fill = manufacturer))
-#'
+#'     geom_bar(aes(fill = manufacturer))
 #' p + scale_fill_pru()
 
 scale_colour_pru <- function(...) { discrete_scale("colour", "pru", pru_pal(), ...) }

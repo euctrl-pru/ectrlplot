@@ -64,13 +64,12 @@ See \url{pru_pal}.
 \examples{
 library(ggplot2)
 library(scales)
-g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
-  geom_point()
 
+g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+    geom_point()
 g + scale_color_pru()
 
 p <- ggplot(mpg[1:137,], aes(class)) +
-  geom_bar(aes(fill = manufacturer))
-
+    geom_bar(aes(fill = manufacturer))
 p + scale_fill_pru()
 }

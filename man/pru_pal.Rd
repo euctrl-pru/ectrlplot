@@ -2,12 +2,12 @@
 % Please edit documentation in R/color.R
 \name{pru_pal}
 \alias{pru_pal}
-\title{A muted, qualitative color palette}
+\title{A diverging, colorblind safe palette}
 \usage{
 pru_pal()
 }
 \description{
-A muted, qualitative color palette
+A diverging, colorblind safe palette
 }
 \examples{
 library(scales)
