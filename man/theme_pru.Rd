@@ -12,7 +12,7 @@ This function allows you to add the pru theme to your ggplot graphics.
 \examples{
 library(ggplot2)
 
-p1 <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+p1 <- ggplot(mpg, aes(displ, hwy)) +
  geom_point() +
  labs(title = 'Scatterplot example in ggplot2',
       subtitle = 'A plot that is only useful for demonstration purposes')

@@ -6,7 +6,7 @@
  #' @examples
  #' library(ggplot2)
  #'
- #' p1 <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+ #' p1 <- ggplot(mpg, aes(displ, hwy)) +
  #'  geom_point() +
  #'  labs(title = 'Scatterplot example in ggplot2',
  #'       subtitle = 'A plot that is only useful for demonstration purposes')
@@ -60,10 +60,10 @@
       #                                  size=10,
       #                                  color="#222222"),
       axis.text.x = ggplot2::element_text(vjust = -0.8,
-                                          size = 9,
+                                          size = 10,
                                           color = "#222222"),
       axis.text.y = ggplot2::element_text(hjust = 1,
-                                          size = 9,
+                                          size = 10,
                                           color = "#222222"),
       axis.ticks = ggplot2::element_blank(),
       axis.line.y = ggplot2::element_blank(),

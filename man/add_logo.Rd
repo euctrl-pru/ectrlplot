@@ -2,7 +2,7 @@
 % Please edit documentation in R/add-logo.R
 \name{add_logo}
 \alias{add_logo}
-\title{Add PRU logo and save ggplot chart}
+\title{Add Eurocontrol logo and save ggplot chart}
 \usage{
 add_logo(plot_name, source_name,
   save_filepath = file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
@@ -13,37 +13,43 @@ add_logo(plot_name, source_name,
 \arguments{
 \item{plot_name}{The variable name of the plot you have created that you want to format and save}
 
-\item{source_name}{The text you want to come after the text 'Source:' in the bottom left hand side of your side}
+\item{source_name}{The text you want to come after the text 'Source:' in the bottom left hand side of your chart}
 
-\item{save_filepath}{Exact filepath that you want the plot to be saved to}
+\item{save_filepath}{The exact filepath that you want your plot to be saved to}
 
 \item{width_pixels}{Width in pixels that you want to save your chart to - defaults to 640}
 
 \item{height_pixels}{Height in pixels that you want to save your chart to - defaults to 450}
 
 \item{logo_image_path}{File path for the logo image you want to use in the right hand side of your chart,
-which needs to be a PNG file - defaults to PRU logo that sits within the data folder of your package}
-}
-\value{
-(Invisibly) an updated ggplot object.
+which needs to be a PNG file - defaults to Eurocontrol logo that sits within the extdata folder of your package}
 }
 \description{
-Running this function will add the PRU logo in your plot and save it to your specified location.
+Running this function will add the Eurocontrol logo in your plot and save it to your specified location.
 }
 \examples{
 library(ggplot2)
 
-myplot <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+myplot <- ggplot(mpg, aes(displ, hwy)) +
 geom_point() +
 theme_pru()
 
 add_logo(plot_name = myplot,
-source = "The source for my data",
-save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
+source = "Source: The source of my data",
 width_pixels = 640,
 height_pixels = 450,
-logo_image_path = system.file("extdata", "euctrl-logo-wide.png", package = "ectrlplot")
-)
+save_filepath = "path-name.png")
 
+# If you want to use your own logo image,
+# change the path in the logo-image-path argument
+
+\dontrun{
+add_logo(plot_name = myplot,
+source = "Source: The source of my data",
+save_filepath = "path-name.png",
+width_pixels = 640,
+height_pixels = 450,
+logo_image_path = "use-your-logo-image-path")
+}
 }
 \keyword{add_logo}
