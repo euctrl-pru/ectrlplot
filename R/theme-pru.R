@@ -8,24 +8,15 @@
  #'
  #' p1 <- ggplot(mpg, aes(displ, hwy, colour = class)) +
  #'  geom_point() +
- #'  theme_pru()
- #' p1
- #'
- #' p1 + theme(panel.grid.major.y = ggplot2::element_blank(),
- #'            axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
- #'                                                size = 1.2,
- #'                                                linetype = "solid",
- #'                                                lineend = "round")) +
  #'  labs(title = 'Scatterplot example in ggplot2',
  #'       subtitle = 'A plot that is only useful for demonstration purposes')
+ #' p1 + theme_pru()
  #'
  #' p2 <- ggplot(mpg[1:137,], aes(class)) +
  #'  geom_bar(aes(fill = manufacturer)) +
- #'  theme_pru() +
  #'  labs(title = 'Barplot example in ggplot2',
  #'       subtitle = 'A plot that is only useful for demonstration purposes')
- #' p2
-
+ #' p2 + theme_pru()
 
  theme_pru <- function() {
     font <- "sans"
@@ -47,7 +38,7 @@
                                             margin=ggplot2::margin(0, 0, 0.5, 0, "cm")),
       plot.caption = ggplot2::element_blank(),
       #This leaves the caption text element empty, because it is set elsewhere in the add logo function
-      plot.margin = grid::unit(c(0,0,1.5,0),"cm"),
+      plot.margin = grid::unit(c(0,0,0.8,0),"cm"),
       #Legend format
       #This sets the position and alignment of the legend, removes a title and backround for it and sets the requirements for any text within the legend. The legend may often need some more manual tweaking when it comes to its exact position based on the plot coordinates.
       legend.position = "right",
@@ -63,13 +54,17 @@
       #This sets the text font, size and colour for the axis test, as well as setting the margins and removes lines and ticks. In some cases, axis lines and axis ticks are things we would want to have in the chart - the cookbook shows examples of how to do so.
       axis.title.x = ggplot2::element_blank(),
       axis.title.y = ggplot2::element_text(family = font,
-                                           size = 10,
+                                           size = 11,
                                            color = "#000000"),
-      axis.text = ggplot2::element_text(family=font,
-                                        size=10,
-                                        color="#222222"),
-      axis.text.x = ggplot2::element_text(vjust = -0.8),  #margin=ggplot2::margin(0,0,0,0),
-      axis.text.y = ggplot2::element_text(hjust = 1),
+      #axis.text = ggplot2::element_text(family=font,
+      #                                  size=10,
+      #                                  color="#222222"),
+      axis.text.x = ggplot2::element_text(vjust = -0.8,
+                                          size = 9,
+                                          color = "#222222"),
+      axis.text.y = ggplot2::element_text(hjust = 1,
+                                          size = 9,
+                                          color = "#222222"),
       axis.ticks = ggplot2::element_blank(),
       axis.line.y = ggplot2::element_blank(),
       axis.line.x = ggplot2::element_line(color = "#D5D5D5",
