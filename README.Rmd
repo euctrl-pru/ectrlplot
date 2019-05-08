@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Overview
 
-The `ectrlplot` package
+The `ectrlplot` package provides helpful functions for creating and exporting graphics made in ggplot2 in the style used by the PRU team.
 
 ## Installation
 
