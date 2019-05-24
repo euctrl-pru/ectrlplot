@@ -9,6 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# ectrlplot <img src="man/figures/logo.svg" align="right" height="139" />
+
 ## Overview
 
 The `ectrlplot` package provides helpful functions for creating and exporting graphics made in ggplot2 in the style used by the PRU team.
