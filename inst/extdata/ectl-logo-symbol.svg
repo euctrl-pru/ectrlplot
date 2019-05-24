@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg2960" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="New document 2" inkscape:version="0.47 r22583"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px" height="810.43px"
+	 viewBox="0 0 800 810.43" enable-background="new 0 0 800 810.43" xml:space="preserve">
+<defs>
+	
+	
+		<inkscape:perspective  id="perspective2968" inkscape:vp_z="744.09448 : 526.18109 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 526.18109 : 1" sodipodi:type="inkscape:persp3d" inkscape:persp3d-origin="372.04724 : 350.78739 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective2915" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d" inkscape:persp3d-origin="0.5 : 0.33333333 : 1">
+		</inkscape:perspective>
+</defs>
+<sodipodi:namedview  showgrid="false" inkscape:cy="433.78406" inkscape:cx="376.47058" inkscape:zoom="0.5" borderopacity="1.0" bordercolor="#000000" pagecolor="#ffffff" id="base" inkscape:window-maximized="1" inkscape:window-y="-8" inkscape:window-x="-8" inkscape:window-height="848" inkscape:window-width="1600" inkscape:current-layer="layer1" inkscape:document-units="px" inkscape:pageshadow="0" inkscape:pageopacity="1.0">
+	</sodipodi:namedview>
+<g id="layer1" transform="translate(26.47058,-88.323492)" inkscape:label="Layer 1" inkscape:groupmode="layer">
+	<g id="g3677" transform="matrix(6.3813359,0,0,-6.3813359,-777.2239,1922.3775)">
+		<g id="g140" transform="translate(224.0294,266.0411)">
+			<path id="path142" fill="#00426C" d="M0,0c-9.297,12.939-24.477,21.368-41.627,21.368c-28.287,0-51.22-22.933-51.22-51.22
+				c0-3.596,0.371-7.1,1.075-10.484l51.499,22.837h-28.169C-63.747-7.43-53.537-0.443-41.695-0.443
+				c8.133,0,15.499-3.293,20.836-8.612L0,0z"/>
+		</g>
+		<g id="g144" transform="translate(234.5233,268.5568)">
+			<path id="path146" fill="#008DBB" d="M0,0l-51.447-52.429h-65.428L0,0z"/>
+		</g>
+		<g id="g148">
+			<g>
+				<defs>
+					<rect id="SVGID_1_" x="-2265.247" y="-1601.69" width="5372.383" height="3798.655"/>
+				</defs>
+				<clipPath id="SVGID_2_">
+					<use xlink:href="#SVGID_1_"  overflow="visible"/>
+				</clipPath>
+				<g id="g150" clip-path="url(#SVGID_2_)">
+					<g id="g156" transform="translate(182.2162,206.6893)">
+						<path id="path158" fill="#00426C" d="M0,0c-7.22,0-13.837,2.525-19.013,6.731h-27.512
+							c8.549-16.886,26.203-28.479,46.593-28.479c20.986,0,39.086,12.215,47.331,29.901H20.657C15.276,3.103,8.005,0,0,0"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<g id="g200">
+			<g>
+				<defs>
+					<rect id="SVGID_3_" x="-2265.247" y="-1601.69" width="5372.383" height="3798.655"/>
+				</defs>
+				<clipPath id="SVGID_4_">
+					<use xlink:href="#SVGID_3_"  overflow="visible"/>
+				</clipPath>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
