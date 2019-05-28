@@ -3,6 +3,11 @@
 
 # ectrlplot <img src="man/figures/logo.svg" align="right" height="139" />
 
+[![Travis build
+status](https://travis-ci.org/euctrl-pru/ectrlplot.svg?branch=master)](https://travis-ci.org/euctrl-pru/ectrlplot)
+[![CRAN
+version](https://www.r-pkg.org/badges/version/ectrlplot)](https://cran.r-project.org/package=ectrlplot)
+
 ## Overview
 
 The `ectrlplot` package provides helpful functions for creating and
