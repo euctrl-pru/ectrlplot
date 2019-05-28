@@ -1,14 +1,20 @@
 ---
 title: "Untitled"
 author: "Stavrou Androniki"
-date: "6 May 2019"
-output: html_document
+date: "`r Sys.Date()`"
+output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-",
+  out.width = "100%"
+)
+```
 # ectrlplot <img src="man/figures/logo.svg" align="right" height="139" />
 
 ## Overview
