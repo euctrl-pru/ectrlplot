@@ -1,6 +1,9 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^README.Rmd
-^docs
-^pkgdown
-^data-raw
+^README\.Rmd$
+^docs$
+^pkgdown$
+^data-raw$
+^cran-comments\.md$
+^\.travis\.yml$
+^tic\.R$
