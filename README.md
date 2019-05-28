@@ -1,7 +1,3 @@
-Untitled
-================
-Stavrou Androniki
-2019-05-28
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 

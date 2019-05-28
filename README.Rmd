@@ -1,7 +1,4 @@
 ---
-title: "Untitled"
-author: "Stavrou Androniki"
-date: "`r Sys.Date()`"
 output: github_document
 ---
 
