@@ -34,6 +34,7 @@ to add the PRU style in the ggplot2 graphics
 to add the EUROCONTROL logo and the source
 
 - `pru_pal()`
+to see the colour palette of the PRU team
 
 - `scale_color_pru()`, `scale_colour_pru()` & `scale_fill_pru()` 
 to use the colour palette of the PRU team
@@ -86,7 +87,11 @@ p2
 
 #### Modify components of the theme_pru() 
 
-If you want to modify a single plot's theme use `theme()`
+If you want to modify some components of the `theme_pru()`, 
+use `theme()` and add your preferences. 
+In this example, the Y axis line is added and the Y axis grid lines in the panel are removed.
+
+See how to [modify components of a theme](https://ggplot2.tidyverse.org/reference/theme.html).
 
 ```{r, fig.show='hold', warning=FALSE}
 p3 <- p2 + theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
@@ -97,7 +102,7 @@ p3 <- p2 + theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
 p3
 ```
 
-#### Add logo 
+#### Add the logo 
 
 Finish the plot by adding the logo and the source.
 
