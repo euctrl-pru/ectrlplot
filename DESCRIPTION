@@ -4,6 +4,8 @@ Title: Making ggplot graphics in PRU style
 Version: 0.1.0
 Authors@R: c(
   person("Stavrou", "Androniki", email = "androniki.g.stavrou@gmail.com", role = c("aut", "cre")),
+  person("Enrico", "Spinielli", email = "enrico.spinielli@eurocontrol.int", role = c("cre"),
+         comment = c(ORCID = "0000-0001-8584-9131")),
   person("EUROCONTROL", role = c("cph", "fnd"))
   )
 Description: A package to create graphics using ggplot2 styled by the PRU team.
