@@ -13,7 +13,7 @@ version](https://www.r-pkg.org/badges/version/ectrlplot)](https://cran.r-project
 The `ectrlplot` package provides helpful functions for creating and
 exporting graphics made in ggplot2 in the style used by the PRU team.
 
-It is inspired by BBC package `[bbplot](https://github.com/bbc/bbplot)`.
+It is inspired by BBC [bbplot](https://github.com/bbc/bbplot) package.
 
 ## Installation
 
