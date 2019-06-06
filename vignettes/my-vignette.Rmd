@@ -51,7 +51,7 @@ This package can be used to give to the graphics made by the PRU team a consiste
 
 The following examples will help you understand how to use `ectrlplot` package and its components step by step.
 
-### Example 1 {#example-01}
+### Example 1 
 
 Let's start with a basic scatterplot example 
 
@@ -63,13 +63,13 @@ p1 <- ggplot(mtcars, aes(wt, mpg)) +
 p1
 ```
 
-#### Adding theme_pru()
+#### Adding theme_pru() {#example-01}
 
 ```{r, fig.show='hold', warning=FALSE}
 p1 + theme_pru()
 ```
 
-#### Discrete color & fill scales based on the PRU palette
+#### Discrete color & fill scales based on the PRU palette {#example-02}
 
 Use the PRU color palette by adding `scale_color_pru()`, `scale_colour_pru()` or `scale_fill_pru()`
 
@@ -102,7 +102,7 @@ p3 <- p2 + theme(axis.line.y = ggplot2::element_line(colour = "#D5D5D5",
 p3
 ```
 
-#### Add the logo 
+#### Add the logo {#example-03}
 
 Finish the plot by adding the logo and the source.
 

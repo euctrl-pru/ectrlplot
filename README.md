@@ -37,6 +37,8 @@ install.packages("ectrlplot")
 [vignette](https://ectrlplot.ansperformance.eu/articles/my-vignette.html "ectrlplot vignette")):
 
   - Add the PRU theme ([Example
-    1](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-01 "Example 1")).
-
-## References
+    1.1](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-01 "Example 1.1")).
+  - Use the PRU colour palette ([Example
+    1.2](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-02 "Example 1.2"))
+  - Add logo and source ([Example
+    1.3](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-03 "Example 1.3")).
