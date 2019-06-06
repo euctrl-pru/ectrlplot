@@ -1,6 +1,6 @@
 Package: ectrlplot
 Type: Package
-Title: Making ggplot graphics in PRU style
+Title: Making ggplot2 graphics in PRU style
 Version: 0.1.0
 Authors@R: c(
   person("Androniki", "Stavrou", email = "androniki.g.stavrou@gmail.com", role = c("aut", "cre")),
