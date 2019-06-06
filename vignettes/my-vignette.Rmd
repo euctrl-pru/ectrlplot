@@ -51,7 +51,7 @@ This package can be used to give to the graphics made by the PRU team a consiste
 
 The following examples will help you understand how to use `ectrlplot` package and its components step by step.
 
-### Example 1 {#example-01}
+### Example 1 
 
 Let's start with a basic scatterplot example 
 
@@ -63,7 +63,7 @@ p1 <- ggplot(mtcars, aes(wt, mpg)) +
 p1
 ```
 
-#### Adding theme_pru()
+#### Adding theme_pru() {#example-01}
 
 ```{r, fig.show='hold', warning=FALSE}
 p1 + theme_pru()
