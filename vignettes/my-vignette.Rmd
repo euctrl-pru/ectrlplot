@@ -129,11 +129,14 @@ g1 <- ggplot(mpg[1:137,], aes(class)) +
      subtitle = 'A plot that is only useful for demonstration purposes')
 g1
 ```
-
+#### Adding theme_pru()
 
 ```{r, fig.show='hold', warning=FALSE}
 g1 + theme_pru()
 ```
+#### Discrete color & fill scales based on the PRU palette
+
+Now, we are grouping the data by class.
 
 ```{r, fig.show='hold', warning=FALSE}
 g2 <- ggplot(mpg[1:137,], aes(class)) +
@@ -144,10 +147,16 @@ g2 <- ggplot(mpg[1:137,], aes(class)) +
 g2
 ```
 
+Use the PRU color palette by adding `scale_fill_pru()`
+
 ```{r, fig.show='hold', warning=FALSE}
 g3 <- g2 + scale_fill_pru()
 g3
 ```
+
+#### Add the logo
+
+Finish the plot by adding the logo and the source.
 
 ```{r, fig.show='hold', warning=FALSE}
 add_logo(plot_name = g3,
