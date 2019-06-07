@@ -3,7 +3,8 @@ Type: Package
 Title: Making ggplot2 graphics in PRU style
 Version: 0.1.0
 Authors@R: c(
-  person("Androniki", "Stavrou", email = "androniki.g.stavrou@gmail.com", role = c("aut", "cre")),
+  person("Androniki", "Stavrou", email = "androniki.g.stavrou@gmail.com", role = c("aut", "cre"),
+         comment = c(ORCID = "0000-0003-4094-1019")),
   person("Enrico", "Spinielli", email = "enrico.spinielli@eurocontrol.int", role = c("aut"),
          comment = c(ORCID = "0000-0001-8584-9131")),
   person("EUROCONTROL", role = c("cph", "fnd"))
