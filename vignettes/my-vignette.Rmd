@@ -63,7 +63,7 @@ p1 <- ggplot(mtcars, aes(wt, mpg)) +
 p1
 ```
 
-#### Adding theme_pru() {#example-01}
+#### Add theme_pru() {#example-01}
 
 ```{r, fig.show='hold', warning=FALSE}
 p1 + theme_pru()
@@ -129,11 +129,13 @@ g1 <- ggplot(mpg[1:137,], aes(class)) +
      subtitle = 'A plot that is only useful for demonstration purposes')
 g1
 ```
-#### Adding theme_pru()
+
+#### Add theme_pru()
 
 ```{r, fig.show='hold', warning=FALSE}
 g1 + theme_pru()
 ```
+
 #### Discrete color & fill scales based on the PRU palette
 
 Now, we are grouping the data by class.
