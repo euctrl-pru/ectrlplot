@@ -104,7 +104,7 @@ p3
 
 #### Add the logo {#example-03}
 
-Finish the plot by adding the logo and the source.
+Finish the plot by adding the logo, the source and the filepath that you want it to be saved.
 
 The EUROCONTROL logo is the default in this package. If you want to use your own logo,
 modify the function by adding the parameter **logo_image_path**.
@@ -158,7 +158,7 @@ g3
 
 #### Add the logo
 
-Finish the plot by adding the logo and the source.
+Finish the plot by adding the logo, the source and the filepath that you want it to be saved.
 
 ```{r, fig.show='hold', warning=FALSE}
 add_logo(plot_name = g3,
