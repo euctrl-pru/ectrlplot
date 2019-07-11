@@ -39,7 +39,7 @@ to see the colour palette of the PRU team
 - `scale_color_pru()`, `scale_colour_pru()` & `scale_fill_pru()` 
 to use the colour palette of the PRU team
 
-```{r fig.align='left', echo=FALSE, out.width='45%', include=identical(knitr:::pandoc_to(), 'html')}
+```{r fig.align='left', echo=FALSE, out.width='40%', include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('pru-pal.png', dpi = NA)
 ```
 
