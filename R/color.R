@@ -1,4 +1,4 @@
-pru_palette <- c('#67001f','#b2182b','#d6604d','#f4a582','#fddbc7', '#92c5de','#4393c3','#2166ac','#053061')
+pru_palette <- c("#92D24A", "#FBC294", "#e6b8b7", "#C0504E", "#2E5D8C", "#BFBFBF")
 
 #' A diverging, colorblind safe color palette
 #'
@@ -6,7 +6,7 @@ pru_palette <- c('#67001f','#b2182b','#d6604d','#f4a582','#fddbc7', '#92c5de','#
 #' @export
 #' @examples
 #' library(scales)
-#' show_col(pru_pal()(9))
+#' show_col(pru_pal()(6))
 pru_pal <- function() { manual_pal(pru_palette) }
 
 #' Discrete color & fill scales based on the PRU palette
@@ -22,11 +22,11 @@ pru_pal <- function() { manual_pal(pru_palette) }
 #' library(ggplot2)
 #' library(scales)
 #'
-#' g <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+#' g <- ggplot(mpg[1:48,], aes(displ, hwy, colour = class)) +
 #'     geom_point()
 #' g + scale_color_pru()
 #'
-#' p <- ggplot(mpg[1:137,], aes(class)) +
+#' p <- ggplot(mpg[1:108,], aes(class)) +
 #'     geom_bar(aes(fill = manufacturer))
 #' p + scale_fill_pru()
 

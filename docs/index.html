@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Making ggplot graphics in PRU style • ectrlplot</title>
+<title>Making ggplot2 graphics in PRU style • ectrlplot</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -15,7 +15,7 @@
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Making ggplot graphics in PRU style">
+<script src="pkgdown.js"></script><meta property="og:title" content="Making ggplot2 graphics in PRU style">
 <meta property="og:description" content="A package to create graphics using ggplot2 styled by the PRU team.">
 <meta property="og:image" content="https://ectrlplot.ansperformance.eu/logo.png">
 <meta name="twitter:card" content="summary">
@@ -64,6 +64,9 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="news/index.html">Changelog</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
 </div>
@@ -106,12 +109,10 @@
 <a href="#usage" class="anchor"></a>Usage</h2>
 <p><code>ectrlplot</code> can be used to (example numbers refer to the ones in the <a href="https://ectrlplot.ansperformance.eu/articles/my-vignette.html" title="ectrlplot vignette">vignette</a>):</p>
 <ul>
-<li>Add the PRU theme (<a href="https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-01" title="Example 1">Example 1</a>).</li>
+<li>Add the PRU theme (<a href="https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-01" title="Example 1.1">Example 1.1</a>).</li>
+<li>Use the PRU colour palette (<a href="https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-02" title="Example 1.2">Example 1.2</a>)</li>
+<li>Add logo and source (<a href="https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-03" title="Example 1.3">Example 1.3</a>).</li>
 </ul>
-</div>
-<div id="references" class="section level2">
-<h2 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h2>
 </div>
 </div>
   </div>
@@ -126,7 +127,8 @@
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Stavrou Androniki <br><small class="roles"> Author, maintainer </small>  </li>
+<li>
+<a href="https://github.com/nstavrou">Androniki Stavrou</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-4094-1019" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
 <li>Enrico Spinielli <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-8584-9131" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
 <li>
 <a href="https://www.eurocontrol.int"><img src="https://ansperformance.eu/images/euctrl-logo-wide.svg" height="24"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
@@ -146,7 +148,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Stavrou Androniki, Enrico Spinielli, <a href="https://www.eurocontrol.int"><img src="https://ansperformance.eu/images/euctrl-logo-wide.svg" height="24"></a>.</p>
+  <p>Developed by <a href="https://github.com/nstavrou">Androniki Stavrou</a>, Enrico Spinielli, <a href="https://www.eurocontrol.int"><img src="https://ansperformance.eu/images/euctrl-logo-wide.svg" height="24"></a>.</p>
 </div>
 
 <div class="pkgdown">

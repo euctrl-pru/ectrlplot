@@ -11,5 +11,5 @@ A diverging, colorblind safe color palette
 }
 \examples{
 library(scales)
-show_col(pru_pal()(9))
+show_col(pru_pal()(6))
 }
