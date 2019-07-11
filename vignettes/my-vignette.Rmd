@@ -39,7 +39,7 @@ to see the colour palette of the PRU team
 - `scale_color_pru()`, `scale_colour_pru()` & `scale_fill_pru()` 
 to use the colour palette of the PRU team
 
-```{r fig.align='left', echo=FALSE, out.width='65%', include=identical(knitr:::pandoc_to(), 'html')}
+```{r fig.align='left', echo=FALSE, out.width='45%', include=identical(knitr:::pandoc_to(), 'html')}
 knitr::include_graphics('pru-pal.png', dpi = NA)
 ```
 
@@ -76,7 +76,7 @@ Use the PRU color palette by adding `scale_color_pru()`, `scale_colour_pru()` or
 ```{r, fig.show='hold', warning=FALSE}
 library(scales)
 
-p2 <- ggplot(mpg, aes(displ, hwy, colour = class)) +
+p2 <- ggplot(mpg[1:48,], aes(displ, hwy, colour = class)) +
  geom_point() +
  theme_pru() +
  scale_color_pru() +
@@ -123,7 +123,7 @@ add_logo(plot_name = p3,
 Now, let's see how to use the `ectrlplot` package in ggplot2 bar chart.
 
 ```{r, fig.show='hold', warning=FALSE}
-g1 <- ggplot(mpg[1:137,], aes(class)) +
+g1 <- ggplot(mpg[1:108,], aes(class)) +
   geom_bar()  +
   labs(title = 'Bar chart example in ggplot2',
      subtitle = 'A plot that is only useful for demonstration purposes')
@@ -141,7 +141,7 @@ g1 + theme_pru()
 Now, we are grouping the data by class.
 
 ```{r, fig.show='hold', warning=FALSE}
-g2 <- ggplot(mpg[1:137,], aes(class)) +
+g2 <- ggplot(mpg[1:108,], aes(class)) +
   geom_bar(aes(fill = manufacturer)) +
   theme_pru() +
   labs(title = 'Bar chart example in ggplot2',
