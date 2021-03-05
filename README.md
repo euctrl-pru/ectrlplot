@@ -3,10 +3,12 @@
 
 # ectrlplot <img src="man/figures/logo.svg" align="right" height="139" />
 
-[![Travis build
-status](https://travis-ci.org/euctrl-pru/ectrlplot.svg?branch=master)](https://travis-ci.org/euctrl-pru/ectrlplot)
+<!-- badges: start -->
+
 [![CRAN
 version](https://www.r-pkg.org/badges/version/ectrlplot)](https://cran.r-project.org/package=ectrlplot)
+[![pkgdown](https://github.com/euctrl-pru/ectrlplot/workflows/pkgdown/badge.svg)](https://github.com/euctrl-pru/ectrlplot/actions)
+<!-- badges: end -->
 
 ## Overview
 
