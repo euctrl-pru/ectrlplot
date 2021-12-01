@@ -65,7 +65,7 @@
       axis.text.y = ggplot2::element_text(hjust = 1,
                                           size = 10,
                                           color = "#222222"),
-      axis.ticks = ggplot2::element_blank(),
+      # axis.ticks = ggplot2::element_blank(),
       axis.line.y = ggplot2::element_blank(),
       axis.line.x = ggplot2::element_line(color = "#D5D5D5",
                                           size = 1.2,
