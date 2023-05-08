@@ -1,4 +1,4 @@
-pru_palette <- c("#92D24A", "#FBC294", "#e6b8b7", "#C0504E", "#2E5D8C", "#BFBFBF")
+pru_palette <- c('#003366','#2990EA','#faba27','#cb6e2b','#369a8d','#b0cb34')
 
 #' A diverging, colorblind safe color palette
 #'
