@@ -16,3 +16,8 @@ development:
 
 pkgdown:
   as_is: true
+
+
+template:
+  bootstrap: 5
+  bootswatch: cerulean

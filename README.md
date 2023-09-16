@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ectrlplot <img src="man/figures/logo.svg" align="right" height="139" />
+# ectrlplot <img src="man/figures/logo.svg" class="logo" />
 
 <!-- badges: start -->
 
@@ -38,9 +38,9 @@ install.packages("ectrlplot")
 `ectrlplot` can be used to (example numbers refer to the ones in the
 [vignette](https://ectrlplot.ansperformance.eu/articles/my-vignette.html "ectrlplot vignette")):
 
-  - Add the PRU theme ([Example
-    1.1](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-01 "Example 1.1")).
-  - Use the PRU colour palette ([Example
-    1.2](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-02 "Example 1.2"))
-  - Add logo and source ([Example
-    1.3](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-03 "Example 1.3")).
+- Add the PRU theme ([Example
+  1.1](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-01 "Example 1.1")).
+- Use the PRU colour palette ([Example
+  1.2](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-02 "Example 1.2"))
+- Add logo and source ([Example
+  1.3](https://ectrlplot.ansperformance.eu/articles/my-vignette.html#example-03 "Example 1.3")).

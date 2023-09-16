@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# ectrlplot <img src="man/figures/logo.svg" align="right" height="139" />
+# ectrlplot <img src="man/figures/logo.svg" class="logo" />
 
 <!-- badges: start -->
 [![CRAN version](https://www.r-pkg.org/badges/version/ectrlplot)](https://cran.r-project.org/package=ectrlplot)
