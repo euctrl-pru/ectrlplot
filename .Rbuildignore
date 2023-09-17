@@ -8,3 +8,4 @@
 ^\.travis\.yml$
 ^tic\.R$
 ^\.github$
+^_pkgdown\.yml$
