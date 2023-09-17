@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="ectrlplot">
 <title>What is the ectrlplot package? • ectrlplot</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,12 +13,11 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="What is the ectrlplot package?">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="What is the ectrlplot package?">
 <meta property="og:description" content="ectrlplot">
 <meta property="og:image" content="https://ectrlplot.ansperformance.eu/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -25,238 +25,244 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">ectrlplot</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">ectrlplot</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/my-vignette.html">What is the ectrlplot package?</a>
+  </div>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/my-vignette.html">What is the ectrlplot package?</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav"></ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
-      
 
-      </header><script src="my-vignette_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>What is the ectrlplot package?</h1>
-                        <h4 class="author">Stavrou Androniki</h4>
+
+
+<div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+      <img src="../logo.svg" class="logo" alt=""><h1>What is the ectrlplot package?</h1>
+                        <h4 data-toc-skip class="author">Stavrou
+Androniki</h4>
             
-            <h4 class="date">2021-12-01</h4>
+            <h4 data-toc-skip class="date">2023-09-17</h4>
       
       
-      <div class="hidden name"><code>my-vignette.Rmd</code></div>
-
+      <div class="d-none name"><code>my-vignette.Rmd</code></div>
     </div>
 
     
     
-<div id="introduction" class="section level2">
-<h2 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h2>
-<div id="what-is-the-ectrlplot-package" class="section level3">
-<h3 class="hasAnchor">
-<a href="#what-is-the-ectrlplot-package" class="anchor"></a>What is the <code>ectrlplot</code> package?</h3>
-<p>This is an R package, developed by the PRU team to make the process of creating publication-ready graphics in our in-house style, using R’s <code>ggplot2</code> library, a more reproducible process.</p>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<div class="section level3">
+<h3 id="what-is-the-ectrlplot-package">What is the <code>ectrlplot</code> package?<a class="anchor" aria-label="anchor" href="#what-is-the-ectrlplot-package"></a>
+</h3>
+<p>This is an R package, developed by the PRU team to make the process
+of creating publication-ready graphics in our in-house style, using R’s
+<code>ggplot2</code> library, a more reproducible process.</p>
 <p>The package is constisted of the following functions:</p>
 <ul>
-<li><p><code><a href="../reference/theme_pru.html">theme_pru()</a></code> to add the PRU style in the ggplot2 graphics</p></li>
-<li><p><code><a href="../reference/add_logo.html">add_logo()</a></code> to add the EUROCONTROL logo and the source</p></li>
-<li><p><code><a href="../reference/pru_pal.html">pru_pal()</a></code> to see the colour palette of the PRU team</p></li>
-<li><p><code><a href="../reference/scale_colour_pru.html">scale_color_pru()</a></code>, <code><a href="../reference/scale_colour_pru.html">scale_colour_pru()</a></code> &amp; <code><a href="../reference/scale_colour_pru.html">scale_fill_pru()</a></code> to use the colour palette of the PRU team</p></li>
+<li><p><code><a href="../reference/theme_pru.html">theme_pru()</a></code> to add the PRU style in the ggplot2
+graphics</p></li>
+<li><p><code><a href="../reference/add_logo.html">add_logo()</a></code> to add the EUROCONTROL logo and the
+source</p></li>
+<li><p><code><a href="../reference/pru_pal.html">pru_pal()</a></code> to see the colour palette of the PRU
+team</p></li>
+<li><p><code><a href="../reference/scale_pru.html">scale_color_pru()</a></code>, <code><a href="../reference/scale_pru.html">scale_colour_pru()</a></code>
+&amp; <code><a href="../reference/scale_pru.html">scale_fill_pru()</a></code> to use the colour palette of the PRU
+team</p></li>
 </ul>
 <p><img src="pru-pal.png" width="40%" style="display: block; margin: auto auto auto 0;"></p>
 </div>
-<div id="why-to-use-it" class="section level3">
-<h3 class="hasAnchor">
-<a href="#why-to-use-it" class="anchor"></a>Why to use it?</h3>
-<p>This package can be used to give to the graphics made by the PRU team a consistent customized look.</p>
+<div class="section level3">
+<h3 id="why-to-use-it">Why to use it?<a class="anchor" aria-label="anchor" href="#why-to-use-it"></a>
+</h3>
+<p>This package can be used to give to the graphics made by the PRU team
+a consistent customized look.</p>
 </div>
 </div>
-<div id="examples" class="section level2">
-<h2 class="hasAnchor">
-<a href="#examples" class="anchor"></a>Examples</h2>
-<p>The following examples will help you understand how to use <code>ectrlplot</code> package and its components step by step.</p>
-<div id="example-1" class="section level3">
-<h3 class="hasAnchor">
-<a href="#example-1" class="anchor"></a>Example 1</h3>
+<div class="section level2">
+<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h2>
+<p>The following examples will help you understand how to use
+<code>ectrlplot</code> package and its components step by step.</p>
+<div class="section level3">
+<h3 id="example-1">Example 1<a class="anchor" aria-label="anchor" href="#example-1"></a>
+</h3>
 <p>Let’s start with a basic scatterplot example.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">wt</span>, <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Scatterplot example in ggplot2'</span>,
-     subtitle <span class="op">=</span> <span class="st">'A plot that is only useful for demonstration purposes'</span><span class="op">)</span>
-<span class="va">p1</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">wt</span>, <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Scatterplot example in ggplot2'</span>,</span>
+<span>     subtitle <span class="op">=</span> <span class="st">'A plot that is only useful for demonstration purposes'</span><span class="op">)</span></span>
+<span><span class="va">p1</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-2-1.png" width="700"></p>
-<div id="example-01" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-01" class="anchor"></a>Add theme_pru()</h4>
+<div class="section level4">
+<h4 id="example-01">Add theme_pru()<a class="anchor" aria-label="anchor" href="#example-01"></a>
+</h4>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">p1</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_pru.html">theme_pru</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">p1</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_pru.html">theme_pru</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-3-1.png" width="700"></p>
 </div>
-<div id="example-02" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-02" class="anchor"></a>Discrete color &amp; fill scales based on the PRU palette</h4>
-<p>Use the PRU color palette by adding <code><a href="../reference/scale_colour_pru.html">scale_color_pru()</a></code>, <code><a href="../reference/scale_colour_pru.html">scale_colour_pru()</a></code> or <code><a href="../reference/scale_colour_pru.html">scale_fill_pru()</a></code>.</p>
+<div class="section level4">
+<h4 id="example-02">Discrete color &amp; fill scales based on the PRU palette<a class="anchor" aria-label="anchor" href="#example-02"></a>
+</h4>
+<p>Use the PRU color palette by adding <code><a href="../reference/scale_pru.html">scale_color_pru()</a></code>,
+<code><a href="../reference/scale_pru.html">scale_colour_pru()</a></code> or <code><a href="../reference/scale_pru.html">scale_fill_pru()</a></code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span>
-
-<span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">48</span>,<span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">displ</span>, <span class="va">hwy</span>, colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
- <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
- <span class="fu"><a href="../reference/theme_pru.html">theme_pru</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
- <span class="fu"><a href="../reference/scale_colour_pru.html">scale_color_pru</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Scatterplot example in ggplot2'</span>,
-     subtitle <span class="op">=</span> <span class="st">'A plot that is only useful for demonstration purposes'</span><span class="op">)</span>
-<span class="va">p2</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org" class="external-link">scales</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">48</span>,<span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">displ</span>, <span class="va">hwy</span>, colour <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span> <span class="fu"><a href="../reference/theme_pru.html">theme_pru</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span> <span class="fu"><a href="../reference/scale_pru.html">scale_color_pru</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Scatterplot example in ggplot2'</span>,</span>
+<span>     subtitle <span class="op">=</span> <span class="st">'A plot that is only useful for demonstration purposes'</span><span class="op">)</span></span>
+<span><span class="va">p2</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
 </div>
-<div id="modify-components-of-the-theme_pru" class="section level4">
-<h4 class="hasAnchor">
-<a href="#modify-components-of-the-theme_pru" class="anchor"></a>Modify components of the theme_pru()</h4>
-<p>If you want to modify some components of the <code><a href="../reference/theme_pru.html">theme_pru()</a></code>, use <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code> and add your preferences. In this example, the Y axis line is added and the Y axis grid lines in the panel are removed.</p>
-<p>See how to <a href="https://ggplot2.tidyverse.org/reference/theme.html">modify components of a theme</a>.</p>
+<div class="section level4">
+<h4 id="modify-components-of-the-theme_pru">Modify components of the theme_pru()<a class="anchor" aria-label="anchor" href="#modify-components-of-the-theme_pru"></a>
+</h4>
+<p>If you want to modify some components of the
+<code><a href="../reference/theme_pru.html">theme_pru()</a></code>, use <code><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme()</a></code> and add your
+preferences. In this example, the Y axis line is added and the Y axis
+grid lines in the panel are removed.</p>
+<p>See how to <a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">modify
+components of a theme</a>.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">p3</span> <span class="op">&lt;-</span> <span class="va">p2</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.line.y <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_line</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"#D5D5D5"</span>,
-                                          size <span class="op">=</span> <span class="fl">1.2</span>,
-                                          linetype <span class="op">=</span> <span class="st">"solid"</span>,
-                                          lineend <span class="op">=</span> <span class="st">"round"</span><span class="op">)</span>,
-           panel.grid.major.y <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-<span class="va">p3</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">p3</span> <span class="op">&lt;-</span> <span class="va">p2</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.line.y <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"#D5D5D5"</span>,</span>
+<span>                                          size <span class="op">=</span> <span class="fl">1.2</span>,</span>
+<span>                                          linetype <span class="op">=</span> <span class="st">"solid"</span>,</span>
+<span>                                          lineend <span class="op">=</span> <span class="st">"round"</span><span class="op">)</span>,</span>
+<span>           panel.grid.major.y <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">p3</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
 </div>
-<div id="example-03" class="section level4">
-<h4 class="hasAnchor">
-<a href="#example-03" class="anchor"></a>Add the logo</h4>
-<p>Finish the plot by adding the logo, the source and the filepath that you want it to be saved.</p>
-<p>The EUROCONTROL logo is the default in this package. If you want to use your own logo, modify the function by adding the parameter <strong>logo_image_path</strong>.</p>
+<div class="section level4">
+<h4 id="example-03">Add the logo<a class="anchor" aria-label="anchor" href="#example-03"></a>
+</h4>
+<p>Finish the plot by adding the logo, the source and the filepath that
+you want it to be saved.</p>
+<p>The EUROCONTROL logo is the default in this package. If you want to
+use your own logo, modify the function by adding the parameter
+<strong>logo_image_path</strong>.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/add_logo.html">add_logo</a></span><span class="op">(</span>plot_name <span class="op">=</span> <span class="va">p3</span>,
-         source <span class="op">=</span> <span class="st">"Source: My source"</span>,
-         save_filepath <span class="op">=</span> <span class="st">"thisismyplot.png"</span>,
-         width_pixels <span class="op">=</span> <span class="fl">640</span>,
-         height_pixels <span class="op">=</span> <span class="fl">450</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/add_logo.html">add_logo</a></span><span class="op">(</span>plot_name <span class="op">=</span> <span class="va">p3</span>,</span>
+<span>         source <span class="op">=</span> <span class="st">"Source: My source"</span>,</span>
+<span>         save_filepath <span class="op">=</span> <span class="st">"thisismyplot.png"</span>,</span>
+<span>         width_pixels <span class="op">=</span> <span class="fl">640</span>,</span>
+<span>         height_pixels <span class="op">=</span> <span class="fl">450</span><span class="op">)</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
 </div>
 </div>
-<div id="example-2" class="section level3">
-<h3 class="hasAnchor">
-<a href="#example-2" class="anchor"></a>Example 2</h3>
-<p>Now, let’s see how to use the <code>ectrlplot</code> package in ggplot2 bar chart.</p>
+<div class="section level3">
+<h3 id="example-2">Example 2<a class="anchor" aria-label="anchor" href="#example-2"></a>
+</h3>
+<p>Now, let’s see how to use the <code>ectrlplot</code> package in
+ggplot2 bar chart.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">g1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">108</span>,<span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span>  <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Bar chart example in ggplot2'</span>,
-     subtitle <span class="op">=</span> <span class="st">'A plot that is only useful for demonstration purposes'</span><span class="op">)</span>
-<span class="va">g1</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">g1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">108</span>,<span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="op">)</span>  <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Bar chart example in ggplot2'</span>,</span>
+<span>     subtitle <span class="op">=</span> <span class="st">'A plot that is only useful for demonstration purposes'</span><span class="op">)</span></span>
+<span><span class="va">g1</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
-<div id="add-theme_pru" class="section level4">
-<h4 class="hasAnchor">
-<a href="#add-theme_pru" class="anchor"></a>Add theme_pru()</h4>
+<div class="section level4">
+<h4 id="add-theme_pru">Add theme_pru()<a class="anchor" aria-label="anchor" href="#add-theme_pru"></a>
+</h4>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">g1</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_pru.html">theme_pru</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">g1</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_pru.html">theme_pru</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
 </div>
-<div id="discrete-color-fill-scales-based-on-the-pru-palette" class="section level4">
-<h4 class="hasAnchor">
-<a href="#discrete-color-fill-scales-based-on-the-pru-palette" class="anchor"></a>Discrete color &amp; fill scales based on the PRU palette</h4>
+<div class="section level4">
+<h4 id="discrete-color-fill-scales-based-on-the-pru-palette">Discrete color &amp; fill scales based on the PRU palette<a class="anchor" aria-label="anchor" href="#discrete-color-fill-scales-based-on-the-pru-palette"></a>
+</h4>
 <p>Now, we are grouping the data by class.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">g2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">108</span>,<span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">manufacturer</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/theme_pru.html">theme_pru</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Bar chart example in ggplot2'</span>,
-     subtitle <span class="op">=</span> <span class="st">'A plot that is only useful for demonstration purposes'</span><span class="op">)</span>
-<span class="va">g2</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">g2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">108</span>,<span class="op">]</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">manufacturer</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_pru.html">theme_pru</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'Bar chart example in ggplot2'</span>,</span>
+<span>     subtitle <span class="op">=</span> <span class="st">'A plot that is only useful for demonstration purposes'</span><span class="op">)</span></span>
+<span><span class="va">g2</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
-<p>Use the PRU color palette by adding <code><a href="../reference/scale_colour_pru.html">scale_fill_pru()</a></code>.</p>
+<p>Use the PRU color palette by adding
+<code><a href="../reference/scale_pru.html">scale_fill_pru()</a></code>.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">g3</span> <span class="op">&lt;-</span> <span class="va">g2</span> <span class="op">+</span> <span class="fu"><a href="../reference/scale_colour_pru.html">scale_fill_pru</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">g3</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">g3</span> <span class="op">&lt;-</span> <span class="va">g2</span> <span class="op">+</span> <span class="fu"><a href="../reference/scale_pru.html">scale_fill_pru</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">g3</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-10-1.png" width="700"></p>
 </div>
-<div id="add-the-logo" class="section level4">
-<h4 class="hasAnchor">
-<a href="#add-the-logo" class="anchor"></a>Add the logo</h4>
-<p>Finish the plot by adding the logo, the source and the filepath that you want it to be saved.</p>
+<div class="section level4">
+<h4 id="add-the-logo">Add the logo<a class="anchor" aria-label="anchor" href="#add-the-logo"></a>
+</h4>
+<p>Finish the plot by adding the logo, the source and the filepath that
+you want it to be saved.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/add_logo.html">add_logo</a></span><span class="op">(</span>plot_name <span class="op">=</span> <span class="va">g3</span>,
-         source <span class="op">=</span> <span class="st">"Source: My source"</span>,
-         save_filepath <span class="op">=</span> <span class="st">"thisismyplot.png"</span>,
-         width_pixels <span class="op">=</span> <span class="fl">640</span>,
-         height_pixels <span class="op">=</span> <span class="fl">450</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/add_logo.html">add_logo</a></span><span class="op">(</span>plot_name <span class="op">=</span> <span class="va">g3</span>,</span>
+<span>         source <span class="op">=</span> <span class="st">"Source: My source"</span>,</span>
+<span>         save_filepath <span class="op">=</span> <span class="st">"thisismyplot.png"</span>,</span>
+<span>         width_pixels <span class="op">=</span> <span class="fl">640</span>,</span>
+<span>         height_pixels <span class="op">=</span> <span class="fl">450</span><span class="op">)</span></span></code></pre></div>
 <p><img src="my-vignette_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
 </div>
 </div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p>Developed by <a href="https://github.com/nstavrou">Androniki Stavrou</a>, Enrico Spinielli, <a href="https://www.eurocontrol.int"><img src="https://ansperformance.eu/images/euctrl-logo-wide.svg" height="24"></a>.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by Androniki Stavrou, Enrico Spinielli, EUROCONTROL.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>
