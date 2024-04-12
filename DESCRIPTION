@@ -28,4 +28,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-URL: https://ectrlplot.ansperformance.eu/
+URL: https://ectrlplot.ansperformance.eu/, https://github.com/euctrl-pru/ectrlplot
